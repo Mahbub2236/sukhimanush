@@ -12,14 +12,24 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('chamber_queues', function (Blueprint $table) {
-            $table->boolean('is_emergency_active')->default(false)->after('doctor_status');
-            $table->string('emergency_reason')->nullable()->after('is_emergency_active');
-            $table->string('emergency_patient_name')->nullable()->after('emergency_reason');
-            $table->timestamp('emergency_started_at')->nullable()->after('emergency_patient_name');
+            if (! Schema::hasColumn('chamber_queues', 'is_emergency_active')) {
+                $table->boolean('is_emergency_active')->default(false)->after('doctor_status');
+            }
+            if (! Schema::hasColumn('chamber_queues', 'emergency_reason')) {
+                $table->string('emergency_reason')->nullable()->after('is_emergency_active');
+            }
+            if (! Schema::hasColumn('chamber_queues', 'emergency_patient_name')) {
+                $table->string('emergency_patient_name')->nullable()->after('emergency_reason');
+            }
+            if (! Schema::hasColumn('chamber_queues', 'emergency_started_at')) {
+                $table->timestamp('emergency_started_at')->nullable()->after('emergency_patient_name');
+            }
         });
 
         Schema::table('appointments', function (Blueprint $table) {
-            $table->boolean('is_emergency')->default(false)->after('is_called');
+            if (! Schema::hasColumn('appointments', 'is_emergency')) {
+                $table->boolean('is_emergency')->default(false)->after('is_called');
+            }
         });
     }
 
