@@ -1,0 +1,436 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   SUKHI MANUSH HEALTHCARE & TELEMEDICINE - TAILWIND V4 MODERN DESIGN SYSTEM
+   ========================================================================== */
+
+/* Universal Viewport & Horizontal Overflow Prevention */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#app, #sukhi-manush-spa-root, #mahriva-spa-root {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Ensure all flex rows and cards handle child overflow properly on mobile */
+.container-fluid, .row, .card, .card-body {
+    max-width: 100%;
+    min-width: 0;
+}
+
+/* Ensure .container maintains proper modern centered layout with balanced left/right padding */
+.container {
+    width: 100%;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    padding-right: 1.25rem !important;
+    padding-left: 1.25rem !important;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px !important;
+        padding-right: 1.5rem !important;
+        padding-left: 1.5rem !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px !important;
+        padding-right: 2rem !important;
+        padding-left: 2rem !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1280px !important; /* Matches max-w-7xl on Home and About pages */
+        padding-right: 2rem !important;
+        padding-left: 2rem !important;
+    }
+}
+
+/* Active Link & Cursor Helpers */
+.router-link-exact-active {
+    color: #e12454 !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Hide mobile bottom navigation bar on all desktop and laptop screens */
+@media (min-width: 992px) {
+    .mobile-bottom-nav,
+    nav.mobile-bottom-nav {
+        display: none !important;
+    }
+}
+
+/* Touch-friendly inputs and buttons */
+.form-control,
+.custom-select,
+.btn {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Core Sukhi Manush Theme Action Buttons */
+.btn-round-full {
+    border-radius: 9999px !important;
+}
+
+.btn-main {
+    background-color: #223a66 !important;
+    border-color: #223a66 !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.btn-main:hover {
+    background-color: #1a2e51 !important;
+    border-color: #1a2e51 !important;
+    color: #ffffff !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(34, 58, 102, 0.25) !important;
+}
+
+.btn-main-2 {
+    background: linear-gradient(135deg, #e12454 0%, #c81e48 100%) !important;
+    border-color: #e12454 !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 4px 12px rgba(225, 36, 84, 0.28) !important;
+}
+.btn-main-2:hover {
+    background: linear-gradient(135deg, #223a66 0%, #1a2e51 100%) !important;
+    border-color: #223a66 !important;
+    color: #ffffff !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(34, 58, 102, 0.3) !important;
+}
+
+.btn-solid-border {
+    border: 2px solid #223a66 !important;
+    background: transparent !important;
+    color: #223a66 !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.25s ease !important;
+}
+.btn-solid-border:hover {
+    background: #223a66 !important;
+    color: #ffffff !important;
+}
+
+.form-control:focus,
+.custom-select:focus {
+    border-color: #223a66;
+    box-shadow: 0 0 0 0.2rem rgba(34, 58, 102, 0.15);
+}
+
+/* Smooth Table Responsive with Touch Scrolling */
+.table-responsive {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    display: block;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 8px;
+}
+
+.table-responsive::-webkit-scrollbar {
+    height: 6px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+/* Diagnostic Test Pill Chips */
+.test-pill-item {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.test-pill-item:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.test-pill-item:active {
+    transform: translateY(0);
+}
+
+/* Advice Card Tiles */
+.advice-card-tile {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.advice-card-tile:hover {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* ==========================================================================
+   MOBILE & TABLET BREAKPOINTS (< 992px & < 768px & < 576px)
+   ========================================================================== */
+
+@media (max-width: 991.98px) {
+    /* Mobile Header & Top Bar */
+    .header-top-bar {
+        padding: 8px 0;
+    }
+    
+    .top-bar-info {
+        display: none !important;
+    }
+
+    .top-right-bar {
+        text-align: center !important;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .navigation .navbar-collapse {
+        background: #ffffff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        margin-top: 10px;
+    }
+
+    .navigation .navbar-nav .nav-link {
+        padding: 10px 0;
+        border-bottom: 1px solid #f1f5f9;
+    }
+}
+
+@media (max-width: 767.98px) {
+    /* Container Paddings */
+    .container-fluid {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+
+    /* Card Padding */
+    .card-body,
+    .card.p-4,
+    .card.p-md-5 {
+        padding: 16px !important;
+    }
+
+    /* Modal Windows on Small Devices */
+    .modal-dialog {
+        margin: 8px;
+        max-width: 100% !important;
+    }
+
+    .modal-content {
+        border-radius: 12px !important;
+    }
+
+    .modal-header {
+        padding: 12px 16px !important;
+    }
+
+    .modal-body {
+        padding: 14px !important;
+    }
+
+    /* Status Pills & Table Rows */
+    .status-pill {
+        font-size: 11px;
+        padding: 3px 8px;
+    }
+
+    /* Step Wizard */
+    .step-item {
+        font-size: 13px !important;
+        padding: 8px 10px !important;
+    }
+
+    /* Prescription Header */
+    .doctor-profile-header img {
+        width: 60px !important;
+        height: 60px !important;
+    }
+
+    /* Pill Badges on Mobile */
+    .test-pill-item {
+        font-size: 12px !important;
+        padding: 5px 10px !important;
+        margin-bottom: 6px !important;
+    }
+
+    .advice-card-tile {
+        font-size: 12px !important;
+        padding: 10px !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    /* Super Small Mobile Screen Optimizations (iPhone SE, Small Androids) */
+    h2, .display-4 {
+        font-size: 1.5rem !important;
+    }
+
+    h3 {
+        font-size: 1.3rem !important;
+    }
+
+    h4 {
+        font-size: 1.15rem !important;
+    }
+
+    h5 {
+        font-size: 1.05rem !important;
+    }
+
+    .btn-main,
+    .btn-main-2 {
+        padding: 10px 18px !important;
+        font-size: 13px !important;
+    }
+
+    .custom-select-sm,
+    .form-control-sm {
+        font-size: 12px !important;
+        height: 34px !important;
+    }
+
+    /* Autocomplete dropdown positioning on mobile */
+    .medicine-autocomplete-dropdown {
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        max-height: 240px !important;
+        z-index: 999999 !important;
+    }
+}
+
+/* Print Rules - Clean Multi-page Digital Rx layout */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #printable-rx,
+    #printable-rx *,
+    #printable-prescription-pad,
+    #printable-prescription-pad * {
+        visibility: visible;
+    }
+    #printable-rx,
+    #printable-prescription-pad {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    #printable-prescription-pad .pad-footer {
+        margin-top: 65mm !important;
+    }
+}
+
+/* Page Title Banner and Overlays */
+.page-title {
+    position: relative;
+    background-color: #1a2e51;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.page-title.bg-1,
+.bg-1 {
+    background-color: #1a2e51;
+    background-image: linear-gradient(135deg, rgba(21, 36, 64, 0.88) 0%, rgba(34, 58, 102, 0.82) 100%), url("/images/bg/22.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.page-title.bg-2,
+.bg-2 {
+    background-color: #1a2e51;
+    background-image: linear-gradient(135deg, rgba(21, 36, 64, 0.88) 0%, rgba(34, 58, 102, 0.82) 100%), url("/images/bg/bg-2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.88) 0%, rgba(34, 58, 102, 0.85) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.page-title .container,
+.page-title .block,
+.page-title .row {
+    position: relative;
+    z-index: 2;
+}
+
+.page-title h1,
+.page-title .block h1 {
+    color: #ffffff !important;
+}
+
+.page-title p,
+.page-title .block p {
+    color: #f1f5f9 !important;
+}
+
+.gray-bg {
+    background-color: #f8fafc;
+}
+

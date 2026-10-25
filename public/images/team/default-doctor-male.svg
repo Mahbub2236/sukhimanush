@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bgGradMale" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3c72" />
+      <stop offset="100%" stop-color="#2a5298" />
+    </linearGradient>
+    <linearGradient id="skinGradMale" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffdfba" />
+      <stop offset="100%" stop-color="#f5c697" />
+    </linearGradient>
+  </defs>
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="98" fill="url(#bgGradMale)" stroke="#ffffff" stroke-width="4" />
+  
+  <!-- Male Doctor Body / Coat -->
+  <!-- Shirt & Tie -->
+  <path d="M70,140 L130,140 L125,200 L75,200 Z" fill="#e8f0fe" />
+  <polygon points="100,145 92,152 95,190 100,200 105,190 108,152" fill="#2563eb" />
+  <!-- Doctor White Coat -->
+  <path d="M40,200 C40,155 65,135 78,135 L100,165 L122,135 C135,135 160,155 160,200 Z" fill="#ffffff" />
+  <!-- Lapels -->
+  <polygon points="78,135 100,165 92,135" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" />
+  <polygon points="122,135 100,165 108,135" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" />
+  
+  <!-- Stethoscope -->
+  <path d="M82,145 C82,175 118,175 118,145" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" />
+  <path d="M100,172 L100,185" fill="none" stroke="#475569" stroke-width="4" />
+  <circle cx="100" cy="188" r="7" fill="#94a3b8" stroke="#334155" stroke-width="2" />
+  
+  <!-- Neck -->
+  <rect x="88" y="115" width="24" height="25" fill="url(#skinGradMale)" rx="4" />
+  
+  <!-- Face -->
+  <ellipse cx="100" cy="92" rx="30" ry="34" fill="url(#skinGradMale)" />
+  <!-- Ears -->
+  <circle cx="68" cy="94" r="7" fill="url(#skinGradMale)" />
+  <circle cx="132" cy="94" r="7" fill="url(#skinGradMale)" />
+  <!-- Hair (Professional Male Cut) -->
+  <path d="M68,85 C68,55 80,48 100,48 C120,48 132,55 132,85 C132,70 120,60 100,60 C80,60 68,70 68,85 Z" fill="#2d3748" />
+  <path d="M72,68 C76,55 92,50 115,50 C128,50 133,58 133,68 C125,58 115,55 95,58 C80,60 75,65 72,68 Z" fill="#1a202c" />
+  
+  <!-- Eyebrows -->
+  <path d="M80,80 Q88,77 94,80" fill="none" stroke="#2d3748" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M106,80 Q112,77 120,80" fill="none" stroke="#2d3748" stroke-width="2.5" stroke-linecap="round" />
+  <!-- Eyes -->
+  <circle cx="87" cy="88" r="3.5" fill="#2d3748" />
+  <circle cx="113" cy="88" r="3.5" fill="#2d3748" />
+  <circle cx="88" cy="87" r="1" fill="#ffffff" />
+  <circle cx="114" cy="87" r="1" fill="#ffffff" />
+  
+  <!-- Nose -->
+  <path d="M98,88 L100,97 L96,99" fill="none" stroke="#d49a6a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Smile -->
+  <path d="M90,107 Q100,115 110,107" fill="none" stroke="#c05621" stroke-width="2.5" stroke-linecap="round" />
+  
+  <!-- Stethoscope Ear Pieces -->
+  <path d="M70,95 Q78,125 82,145" fill="none" stroke="#475569" stroke-width="3" stroke-linecap="round" />
+  <path d="M130,95 Q122,125 118,145" fill="none" stroke="#475569" stroke-width="3" stroke-linecap="round" />
+  <circle cx="70" cy="95" r="3" fill="#334155" />
+  <circle cx="130" cy="95" r="3" fill="#334155" />
+</svg>

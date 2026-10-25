@@ -1,0 +1,27 @@
+# ==============================================================================
+# Systemd Service Unit for Sukhi Manush Queue Worker (Alternative to Supervisor)
+# ==============================================================================
+# Location on server: /etc/systemd/system/sukhimanush-worker@.service
+# Enable & Start multiple instances (e.g., 4 workers):
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now sukhimanush-worker@{1..4}.service
+# Check status:
+#   sudo systemctl status "sukhimanush-worker@*.service"
+# ==============================================================================
+
+[Unit]
+Description=Sukhi Manush Queue Worker %i
+After=network.target redis-server.service mysql.service
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+Restart=always
+RestartSec=5s
+ExecStart=/usr/bin/php /var/www/sukhimanush/artisan queue:work redis --sleep=3 --tries=3 --max-time=3600 --timeout=90
+StandardOutput=append:/var/log/sukhimanush-worker.log
+StandardError=append:/var/log/sukhimanush-worker.error.log
+
+[Install]
+WantedBy=multi-user.target

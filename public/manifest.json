@@ -1,0 +1,110 @@
+{
+  "name": "সুখী মানুষ (Sukhi Manush) - ডিজিটাল স্বাস্থ্যসেবা",
+  "short_name": "সুখী মানুষ",
+  "description": "বিশেষজ্ঞ ডাক্তার সিরিয়াল, প্রেসক্রিপশন ও ডিজিটাল স্বাস্থ্যসেবা প্ল্যাটফর্ম",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0284C7",
+  "lang": "bn-BD",
+  "dir": "ltr",
+  "categories": [
+    "medical",
+    "health",
+    "lifestyle"
+  ],
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "ডাক্তার খুঁজুন",
+      "short_name": "ডাক্তার",
+      "description": "বিশেষজ্ঞ চিকিৎসক খুঁজুন ও সিরিয়াল নিন",
+      "url": "/doctors",
+      "icons": [{ "src": "/icons/icon-96x96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "লাইভ কিউ ট্র্যাকার",
+      "short_name": "লাইভ কিউ",
+      "description": "চেম্বারের বর্তমান সিরিয়াল নম্বর দেখুন",
+      "url": "/live-queue",
+      "icons": [{ "src": "/icons/icon-96x96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "পেশেন্ট পোর্টাল",
+      "short_name": "প্রেসক্রিপশন",
+      "description": "প্রেসক্রিপশন ও টেস্ট রিপোর্ট খাতা",
+      "url": "/patient/dashboard",
+      "icons": [{ "src": "/icons/icon-96x96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "জরুরী স্বাস্থ্য হাব",
+      "short_name": "ইমার্জেন্সি",
+      "description": "২৪/৭ অ্যাম্বুলেন্স ও ব্লাড SOS",
+      "url": "/emergency",
+      "icons": [{ "src": "/icons/icon-96x96.png", "sizes": "96x96" }]
+    }
+  ]
+}
